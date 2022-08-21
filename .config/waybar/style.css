@@ -1,0 +1,71 @@
+* {
+    font-family: "NotoSansMono Nerd Font";
+    font-size: 20px;
+}
+
+
+window#waybar { 
+    background-color: #101010; 
+    color: #ffffff;    
+}
+
+
+.modules-left {
+    padding: 0px 0px 0px 0px;
+}
+
+
+.modules-right {
+    padding: 0px 7px 0px 0px;
+}
+
+
+#workspaces button {
+    padding: 0px 10px 0px 10px; 
+    min-width: 1px;
+    color: #ffffff;
+}
+
+
+#workspaces button:hover {
+    background: #272727;
+}
+
+
+#workspaces button.focused { 
+    padding: 0px 10px 0px 10px; 
+    background-color: #333333;
+    color: #ffffff;
+}
+
+
+#taskbar button:hover {
+    background: #272727;
+}
+
+
+#taskbar button.active {
+    background-color: #333333;
+}
+
+#idle_inhibitor,
+#language,
+#battery,
+#bluetooth,
+#network,
+#backlight,
+#pulseaudio {
+    padding-right: 26px;
+}
+
+#idle_inhibitor {
+    padding-left: 14px;
+}
+#battery.critical {
+   color: #ff5555;
+}
+
+
+#network.disconnected {
+    color: #ff5555;
+}

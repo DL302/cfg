@@ -1,0 +1,84 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 36,
+
+
+    "modules-left": ["sway/workspaces", "wlr/taskbar"],
+    "modules-right": ["idle_inhibitor", "sway/language", "battery", "bluetooth", "network", "backlight", "pulseaudio", "clock"],
+
+
+    "sway/workspaces": {
+        "format": "{index}" 
+    },
+
+
+    "wlr/taskbar": {
+        "on-click": "activate",
+    },
+
+    
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+	    "activated": "廊",
+	    "deactivated": "",
+	}
+    },
+
+
+    "sway/language": {
+        "format": " {short} {variant}",
+	"on-click": "swaymsg input type:keyboard xkb_switch_layout_next",
+    },
+
+    
+    "battery": {
+        "bat": "BAT0",
+        "states": {
+            "full": 100,
+            "warning": 80,
+            "critical": 20,
+        },
+
+        "format": "{icon}{capacity}%",
+	"format-unknown": "un",
+        "format-icons": ["", "", "", "", ""],
+    },
+
+
+    "bluetooth": {
+	"format": "",
+        "format-disabled": ""
+    },
+        
+    
+    "network": {
+        "interface": "ens33", 
+	"format-ethernet": " a",
+        "format-wifi": "  WiFi-On",
+        "format-disconnected": "睊 Disconnected",
+    },
+
+   
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon}{percent}%",
+        "format-icons": ["","","",""],
+    },
+
+
+    "pulseaudio": {
+        "format": "{icon}{volume}%",
+        "format-bluetooth": " {volume}%",
+        "format-muted": "ﱝ{volume}%",
+        "format-icons": ["", "墳", ""],
+	"scroll-step": 1,
+        "on-click": "pavucontrol",
+    },
+
+
+    "clock": {
+        "format": "{:%a %b %e  %R}",
+    }
+}
